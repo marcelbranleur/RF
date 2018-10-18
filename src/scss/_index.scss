@@ -7,6 +7,10 @@ body {
 // NAVIGATION
 nav {
 
+    // &.navbar {
+    //     display: block;
+    // }
+
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
 
@@ -31,18 +35,21 @@ nav {
 
     &.navbar {
         background-color: #fff;
+        // align-items: flex-start;
     }
 
     & a.nav-link {
         color: #000 !important;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .dropdown-menu {
-        border: 2px solid $color-purple;
+        // border: 2px solid $color-purple;
+        border-radius: 0;
 
         .dropdown-item {
             font-weight: 700;
+            font-size: 1.3rem;
         }
     }
 
@@ -56,6 +63,9 @@ nav {
     }
 
     .right-corner {
+        justify-content: flex-start;
+        align-content: flex-start;
+        margin-left: auto;
         a {
             display: inline;
             font-size: 0.7rem;

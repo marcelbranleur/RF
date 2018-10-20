@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Brandon Text", sans-serif;
 }
 
 // font-family: 'Montserrat', sans-serif;
@@ -60,31 +60,17 @@ nav {
     }
 
     .navbar-brand {
-        width: 14rem;
+        width: 10rem;
+
+        @include media-breakpoint-up(md) {
+            width: 14rem;
+        }
 
         .logo {
             width: 100%;
             height: auto;
         }
     }
-
-    // .wrapper-left {
-    //     width: 100%;
-    //     display: flex;
-    //     flex-direction: row;
-
-    //     @include media-breakpoint-up(lg) {
-    //         flex-direction: column;
-    //      }
-
-    //     button {
-    //         align-self: flex-start;
-
-    //         @include media-breakpoint-up(lg) {
-    //             align-self: center;
-    //          }
-    //     }
-    // }
 
     div.navbar-collapse {
         @include media-breakpoint-up(lg) {
@@ -130,21 +116,36 @@ nav {
 //  HEADER
 
 .header {
-    height: 30rem;
+    height: 10rem;
     overflow: hidden;
+
+    @include media-breakpoint-up(md) {
+        height: 15rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 20rem;
+    }
 
     img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        object-fit: center;
     }
 }
 
 // BLOG AREA
 
 .blog {
-    margin: 3rem 0;
+    margin: 1rem 0;
 
+    @include media-breakpoint-up(md) {
+        margin: 2rem 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin: 3rem 0;
+    }
 
 
 
@@ -200,25 +201,46 @@ nav {
         width: 20rem;
     }
 
+    &-widget {
+        margin-top: 1rem;
+    }
+
     ul.footer-menu {
         list-style: none;
         font-size: 0.8rem;
         display: flex;
         justify-content: center;
-        margin-top: 2rem;
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 0;
 
-        li:not(:last-child) {
-            /* This will not give border to last li element */
-            border-right:solid 1px rgb(187, 187, 187);
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            margin-top: 2rem;
+
+            li:not(:last-child) {
+                /* This will not give border to last li element */
+                // border-right:solid 1px rgb(187, 187, 187);
+                border-right:solid 1px #fff;
+            }
+        }
+
+
+
+        li {
             font-weight: 700;
-            border-right:solid 1px #fff;
         }
 
         a {
             color: white;
             // color: rgb(187, 187, 187);
-            display: inline-block;
             text-transform: uppercase;
+            padding: 0.2rem 0;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(md) {
+                padding: 0.5rem 1rem;
+            }
         }
     }
 
@@ -228,10 +250,13 @@ nav {
     }
 
     .copyright {
+        margin-top: 1rem;
         font-size: 0.8rem;
     }
 
     .social-icons {
+        margin-top: 1rem;
+
         i {
             padding: 0 1rem;
         }
@@ -243,7 +268,6 @@ nav {
 
 .btn-end {
     width: auto;
-    align-self: flex-start;
 }
 
 

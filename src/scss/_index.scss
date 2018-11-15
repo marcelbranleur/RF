@@ -71,10 +71,12 @@ nav {
     }
 
     .navbar-brand {
-        width: 10rem;
+        width: 15rem;
+
+        position: relative;
 
         @include media-breakpoint-up(md) {
-            width: 14rem;
+            width: 20rem;
         }
 
         @include media-breakpoint-up(lg) {
@@ -87,12 +89,12 @@ nav {
         }
     }
 
-    div.navbar-collapse {
-        @include media-breakpoint-up(lg) {
-             flex-direction: column !important;
-             width: 100%;
-        }
-    }
+    // div.navbar-collapse {
+    //     @include media-breakpoint-up(lg) {
+    //          flex-direction: column !important;
+    //          width: 100%;
+    //     }
+    // }
 
 
 
@@ -106,14 +108,31 @@ nav {
         //     margin-left: auto;
         // }
 
-        align-self: flex-end;
+        // position: absolute;
+        // top: 2rem;
+        // right: 1rem;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
+        }
+
+        display: flex;
+        justify-content: center;
+
+
         a {
             display: inline;
-            font-size: 0.7rem;
+            font-size: 1rem;
             padding: 0 0.2rem;
             display: inline-flex;
             align-items: center;
             border-bottom: 2px solid transparent;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 0.7rem;
+            }
 
             &:hover,
             &:focus {
@@ -184,21 +203,26 @@ nav {
         margin: 3rem 0;
     }
 
+    // if sidebar first on tablet and phone
 
+    // &>.container>.row {
+    //     flex-direction: column-reverse;
 
-    &>.container>.row {
-        flex-direction: column-reverse;
-
-        @include media-breakpoint-up(lg) {
-            flex-direction: row;
-        }
-    }
+    //     @include media-breakpoint-up(lg) {
+    //         flex-direction: row;
+    //     }
+    // }
 
 
 
     .card {
         border: 2px solid $color-purple;
         flex: 1;
+        margin: 2rem 0;
+
+        @include media-breakpoint-up(lg) {
+            margin: 1rem 0;
+        }
 
         &-img-top {
             height: 250px;
@@ -217,6 +241,9 @@ nav {
         border-radius: 0.25rem;
         flex: 2;
         padding: 1.25rem;
+        margin: 1rem 0;
+
+
 
         .language div {
             // text-align: center;
@@ -244,8 +271,8 @@ nav {
     background-color: $color-purple;
     // color: rgb(187, 187, 187);
     color: #fff;
-    padding: 4rem 0;
-    margin-top: 2rem;
+    padding: 4rem 1rem;
+    // margin: 2rem 3rem;
 
     &-logo {
         width: 20rem;
@@ -328,10 +355,6 @@ nav {
 
 
 
-.btn-end {
-    width: auto;
-}
-
 
 
 // @include media-breakpoint-up(xs) { ... }
@@ -339,3 +362,34 @@ nav {
 // @include media-breakpoint-up(md) { ... }
 // @include media-breakpoint-up(lg) { ... }
 // @include media-breakpoint-up(xl) { ... }
+
+
+// images
+
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+// img.thumbnail {
+//     max-width: 150px;
+//     height: auto;
+//     overflow: hidden;
+// }
+
+img.wp-post-image {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+img.attachment-medium {
+    max-width: 500px;
+    height: auto;
+    overflow: hidden;
+}
+
+
+
